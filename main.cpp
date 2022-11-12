@@ -26,7 +26,7 @@ int main() {
 				cin >> inputed;
 				cout << endl;
 
-				if ((inputed.find('.') != inputed.npos) && (inputed.find(',') != inputed.npos)) {
+				if ((inputed.find('.') != inputed.npos) || (inputed.find(',') != inputed.npos)) {
 
 					cout << "Value must be integer" << endl;
 					k--;
@@ -163,13 +163,13 @@ string selPath() {
 		ipath = delSymbol(ipath, '\"');
 		ipath = delSymbol(ipath, ' ');
 
-		if (n > 4) {
-
-			break;
-
+		
+		int n1 = ipath.length();
+		if (ipath[n1 - 1] != 't' && ipath[n1 - 2] != 'x' && ipath[n1 - 3] != 't' && ipath[n1 - 4] != '.') {
+			cout << "File must be .txt" << endl;
 		}
 		else {
-			cout << "Path is too small (please add .txt to make file readable)" << endl;
+			break;
 		}
 		
 	}
