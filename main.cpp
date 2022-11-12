@@ -163,17 +163,17 @@ string selPath() {
 		ipath = delSymbol(ipath, '\"');
 		ipath = delSymbol(ipath, ' ');
 
-		
+
 		int n1 = ipath.length();
-		if (ipath[n1 - 1] != 't' && ipath[n1 - 2] != 'x' && ipath[n1 - 3] != 't' && ipath[n1 - 4] != '.') {
+		if (n1 < 4 || (ipath[n1 - 1] != 't' && ipath[n1 - 2] != 'x' && ipath[n1 - 3] != 't' && ipath[n1 - 4] != '.')) {
 			cout << "File must be .txt" << endl;
 		}
 		else {
 			break;
 		}
-		
+
 	}
-	
+
 
 	return ipath;
 }
